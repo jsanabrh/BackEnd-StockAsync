@@ -18,15 +18,13 @@ export class AuthService {
         role: payload.role,
       };
 
-      const [accessToken, refreshToken] = await Promise.all([
+      const [accessToken] = await Promise.all([
         this.authenticationService.generateJwtAccessToken(data),
-        this.authenticationService.generateJwtRefreshToken(data),
       ]);
 
       return {
-        message: 'Authoriced',
+        message: 'User authorized',
         accessToken,
-        refreshToken,
         user: payload,
       };
     } catch (error) {

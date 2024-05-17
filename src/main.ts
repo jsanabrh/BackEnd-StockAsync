@@ -5,7 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function aplication() {
   const app = await NestFactory.create(AppModule);
-  const port = process.env.PORT || 4000;
+  const port = process.env.PORT || 5000;
 
   app.setGlobalPrefix('/v1/api');
 
@@ -16,7 +16,7 @@ async function aplication() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
 
-  SwaggerModule.setup('docs', app, document);
+  SwaggerModule.setup('v1/api/docs', app, document);
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -30,5 +30,6 @@ async function aplication() {
 
   await app.listen(port);
   console.log(`Application is running on: http://localhost:${port}/v1/api`);
+  console.log(`Swagger documentation: http://localhost:${port}/v1/api/docs`);
 }
 aplication();

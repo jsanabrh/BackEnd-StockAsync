@@ -17,8 +17,6 @@ export default registerAs('dbConfig', () => {
       accessToken: process.env.ACCESS_TOKEN,
       jwtAccessTokenSecret: process.env.JWT_ACCESS_SECRET,
       jwtAccessTokenExpiresTime: process.env.JWT_ACCESS_EXPIRES_TIME,
-      jwtRefreshTokenSecret: process.env.JWT_SECRET_REFRESH,
-      jwtRefreshTokenExpiresTime: process.env.JWT_REFRESH_EXPIRES_TIME,
     },
   };
 });
