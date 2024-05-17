@@ -1,5 +1,6 @@
 import {
   IsNotEmpty,
+  IsOptional,
   IsString,
   Matches,
   MaxLength,
@@ -31,4 +32,8 @@ export class CreateUserDto {
     message: 'Invalid Password',
   })
   password: string;
+
+  @ApiProperty()
+  @IsOptional()
+  role: string;
 }
