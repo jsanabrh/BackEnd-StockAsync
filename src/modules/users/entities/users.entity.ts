@@ -1,5 +1,8 @@
+import { IsOptional } from '@nestjs/class-validator';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { Role } from 'src/models/roles.model';
+import { IsEnum } from 'class-validator';
 
 @Schema({ timestamps: true })
 export class User extends Document {
@@ -14,6 +17,11 @@ export class User extends Document {
 
   @Prop({ trim: true })
   password: string;
+
+  @IsEnum(Role)
+  @IsOptional()
+  @Prop({ trim: true, enum: Role, default: Role.SELLER })
+  role: Role;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
