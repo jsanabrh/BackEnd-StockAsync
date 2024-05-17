@@ -8,7 +8,9 @@ import {
 export class ErrorService {
   createError(error: any) {
     if (error.name === 'MongoServerError' && error.code === 11000) {
-      throw new BadRequestException(`The ${Object.keys(error.keyValue)} exist`);
+      throw new BadRequestException(
+        `The ${Object.keys(error.keyValue)} already exist`,
+      );
     } else {
       throw new InternalServerErrorException(error.message);
     }

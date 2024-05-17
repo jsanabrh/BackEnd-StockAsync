@@ -34,18 +34,6 @@ export class AuthenticationService {
     }
   }
 
-  generateJwtRefreshToken(payload: PayloadToken) {
-    try {
-      const refreshToken = this.jwtService.signAsync(payload, {
-        secret: this.configService.session.jwtRefreshTokenSecret,
-        expiresIn: this.configService.session.jwtRefreshTokenExpiresTime,
-      });
-      return refreshToken;
-    } catch (error) {
-      this.errorService.createError(error);
-    }
-  }
-
   async findUserAuth(signInDto: SignInDto) {
     try {
       const user = await this.userModel
@@ -54,7 +42,9 @@ export class AuthenticationService {
         })
         .exec();
       if (!user) {
-        throw new BadRequestException('Password or identification invalid');
+        throw new BadRequestException(
+          'User identification or password invalid',
+        );
       }
 
       const isValidPassword = await this.HashingService.compare(
@@ -63,7 +53,9 @@ export class AuthenticationService {
       );
 
       if (!isValidPassword) {
-        throw new BadRequestException('Password or Identification invalid');
+        throw new BadRequestException(
+          'User identification or password invalid',
+        );
       }
 
       return user;
