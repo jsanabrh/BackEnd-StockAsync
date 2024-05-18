@@ -9,22 +9,34 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserDto {
-  @ApiProperty()
+  @ApiProperty({
+    example: '10000987434',
+    description: 'The ID of the user',
+  })
   @IsString()
   @IsNotEmpty({ message: 'The identification is obligatory' })
   userIdentification: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    example: 'Juan Pablo',
+    description: 'The name of the user',
+  })
   @IsString()
   @IsNotEmpty({ message: 'The user name is obligatory' })
   userName: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    example: 'Sanabria Hoyos',
+    description: 'The last name of the user',
+  })
   @IsString()
   @IsNotEmpty({ message: 'The user lastname is obligatory' })
   userLastName: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    example: 'Juan12345',
+    description: 'The password of the user',
+  })
   @IsString({ message: 'The password is not valid' })
   @MinLength(6)
   @MaxLength(20)
@@ -34,7 +46,10 @@ export class CreateUserDto {
   })
   password: string;
 
-  @ApiProperty()
+  @ApiProperty({
+    example: 'seller',
+    description: 'The user role, which is set to seller by default',
+  })
   @IsOptional()
   role: string;
 }

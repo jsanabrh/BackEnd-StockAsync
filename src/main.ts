@@ -11,7 +11,9 @@ async function aplication() {
 
   const config = new DocumentBuilder()
     .setTitle('StockAsync')
-    .setDescription('Login and Register')
+    .setDescription(
+      'The registration and login system has been implemented to provide a secure and efficient method of user authentication. When logging in, the system generates and returns a JSON Web Token (JWT). This token is used to authenticate and authorize access to the resources of the ApiRest developed in Java. By using the JWT, it ensures that subsequent interactions with the ApiRest are secure and that only authenticated users can access the protected services.',
+    )
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
