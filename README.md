@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -6,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive aaaaa<a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">A progressive<a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -20,59 +19,51 @@
     <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# StockAsync
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The registration and login system has been implemented to provide a secure and efficient method of user authentication. When logging in, the system generates and returns a JSON Web Token (JWT). This token is used to authenticate and authorize access to the resources of the ApiRest developed in Java. By using the JWT, it ensures that subsequent interactions with the ApiRest are secure and that only authenticated users can access the protected services.
+
 
 ## Installation
 
-```bash
-$ npm install
-```
+Install the necessary dependencies for running the program.
 
-## Running the app
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+  npm install 
+  cd back-end-stock-async
 ```
+    
+## Running App
 
-## Test
+Command necessary for running the application
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+  npm run start
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Project Proposal
 
-## Stay in touch
+## Conducted By
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Sara Ruiz, Valeria Henao, Maria Alejandra Ramirez and Miguel Angel Espinal from the Meta clan and Juan Pablo Sanabria and Cristian Franco from Van Rossum clan.
 
-## License
+##Category
 
-Nest is [MIT licensed](LICENSE).
-=======
-# BackEnd---StockAsync
-BackEnd StockAsync's finaly project RIWI
->>>>>>> 65efa02b65f6ff9b0d3007536b5641d9b870928e
+E-commerce of products and services
+
+##Purpose
+
+Develop an inventory and billing management system for stores, with the capability to manage multiple stores simultaneously and provide differentiated functionalities for employees and administrators.
+
+##Why? 
+
+The lack of efficient systems complicates inventory and billing management in stores, causing errors, time loss, and lack of relevant information, especially when managing multiple stores.
+
+##For whon? 
+
+The StockSync inventory and billing management system is designed for store owners and managers who face challenges in inventory management and billing processes, particularly those operating multiple stores simultaneously.
+
+It also benefits store employees by facilitating tasks such as generating invoices and managing customers, thereby optimizing their time and increasing accuracy in their daily operations.
