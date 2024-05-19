@@ -28,11 +28,13 @@ export class UsersController {
     return await this.usersService.findAll();
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get('getOne/:userIdentification')
   async findOne(@Param('userIdentification') userIdentification: string) {
     return await this.usersService.findOne(userIdentification);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete('deleteUser/:userIdentification')
   remove(@Param('userIdentification') userIdentification: string) {
     return this.usersService.remove(userIdentification);

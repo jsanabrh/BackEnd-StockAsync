@@ -59,6 +59,9 @@ export class UsersService {
           `User with id ${userIdentification} not found`,
         );
       }
+      return await {
+        message: `The user with identification number ${user.userIdentification} has been successfully deleted.`,
+      };
     } catch (error) {
       this.errorService.createError(error);
     }

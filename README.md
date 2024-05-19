@@ -85,7 +85,7 @@ PORT= 4000
 
 ### Configure Postman
 ```bash
-We will open the local Postman and import the 'postman_collection.json' file to load the request collection and test our endpoints.
+We will open the local Postman and import the 'StockAsync.postman_collection.json' file, which is in the 'postman' folder, to load the request collection and test our endpoints.
 ```
 
 ### Start the app and acces the endpoint documentation
