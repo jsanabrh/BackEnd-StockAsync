@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
-import dbConfig from 'src/database/db-config';
+import dbConfig from '../../../infrastructure/database/db-config';
 import { ConfigType } from '@nestjs/config';
 import { PayloadToken } from '../models/token.model';
 

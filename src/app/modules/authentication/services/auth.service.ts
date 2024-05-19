@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { AuthenticationService } from './authentication.service';
-import { SignInPayload } from 'src/models/signIn.model';
-import { ErrorService } from 'src/errors/errors.service';
-import { PayloadToken } from '../../models/token.model';
+import { AuthenticationService } from '../../authentication/services/authentication.service';
+import { SignInPayload } from '../../../../infrastructure/adapters/models/signIn.model';
+import { ErrorService } from '../../../../errors/errors.service';
+import { PayloadToken } from '../../../../infrastructure/adapters/models/token.model';
 
 @Injectable()
 export class AuthService {

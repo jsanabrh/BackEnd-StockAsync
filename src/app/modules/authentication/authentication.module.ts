@@ -2,16 +2,16 @@ import { Module } from '@nestjs/common';
 import { AuthenticationController } from './controllers/authentication.controller';
 import { AuthenticationService } from './services/authentication.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { User, UserSchema } from 'src/modules/users/entities/users.entity';
-import { hashingService } from 'src/providers/hashing/hashing.service';
-import { bcryptService } from 'src/providers/hashing/bcrypt.service';
-import { ErrorModule } from 'src/errors/errors.module';
+import { User, UserSchema } from '../users/entities/users.entity';
+import { hashingService } from '../../../infrastructure/adapters/hashing/hashing.service';
+import { bcryptService } from '../../../infrastructure/adapters/hashing/bcrypt.service';
+import { ErrorModule } from '../../../errors/errors.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigType } from '@nestjs/config';
-import dbConfig from 'src/database/db-config';
-import { JwtStrategy } from 'src/strategy/jwt.strategy';
-import { AuthService } from './services/auth.service';
-import { localStrategy } from 'src/strategy/local.strategy';
+import dbConfig from '../../../infrastructure/database/db-config';
+import { JwtStrategy } from '../../../infrastructure/adapters/strategys/jwt.strategy';
+import { AuthService } from '../authentication/services/auth.service';
+import { localStrategy } from '../../../infrastructure/adapters/strategys/local.strategy';
 
 @Module({
   imports: [

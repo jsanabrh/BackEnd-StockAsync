@@ -3,9 +3,9 @@ import { UsersController } from './controllers/users.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersService } from './services/users.service';
 import { User, UserSchema } from './entities/users.entity';
-import { hashingService } from 'src/providers/hashing/hashing.service';
-import { bcryptService } from 'src/providers/hashing/bcrypt.service';
-import { ErrorModule } from 'src/errors/errors.module';
+import { hashingService } from '../../../infrastructure/adapters/hashing/hashing.service';
+import { bcryptService } from '../../../infrastructure/adapters/hashing/bcrypt.service';
+import { ErrorModule } from '../../../errors/errors.module';
 
 @Module({
   imports: [

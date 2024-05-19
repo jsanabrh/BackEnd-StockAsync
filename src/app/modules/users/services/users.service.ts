@@ -3,12 +3,12 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { CreateUserDto } from '../dto/create-user.dto';
+import { CreateUserDto } from '../dtos/create-user.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { User } from '../entities/users.entity';
 import { Model } from 'mongoose';
-import { hashingService } from '../../../providers/hashing/hashing.service';
-import { ErrorService } from 'src/errors/errors.service';
+import { hashingService } from '../../../../infrastructure/adapters/hashing/hashing.service';
+import { ErrorService } from '../../../../errors/errors.service';
 
 @Injectable()
 export class UsersService {
