@@ -48,4 +48,19 @@ export class UsersService {
       throw new BadRequestException(error.message);
     }
   }
+
+  async remove(userIdentification: string): Promise<any> {
+    try {
+      const user = await this.userModel
+        .findOneAndDelete({ userIdentification: userIdentification })
+        .exec();
+      if (!user) {
+        throw new NotFoundException(
+          `User with id ${userIdentification} not found`,
+        );
+      }
+    } catch (error) {
+      this.errorService.createError(error);
+    }
+  }
 }
