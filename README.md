@@ -53,6 +53,59 @@ It also benefits store employees by facilitating tasks such as generating invoic
 
 administrators
 
+# Structure
+
+We use the hexagonal structure as it can promote a cleaner, more flexible, and maintainable architecture, making software development and evolution easier over time
+
+``` bash
+src/
+├── infrastructure/
+│   ├── database/
+│   │   ├── database.module.ts
+│   │   ├── db-config.ts
+│   │   └── index.ts
+│   ├── adapters/ 
+│   │   ├── hashing/
+│   │   │   ├── bcrypt.service.ts
+│   │   │   └── hashing.service.ts
+│   │   ├── models/
+│   │   │   ├── roles.model.ts
+│   │   │   ├── signIn.model.ts
+│   │   │   └── token.model.ts
+│   │   ├── strategys/
+│   │   │   ├── jwt.strategy.ts
+│   │   │   └── local.strategy.ts
+├── app/
+│   ├── modules/
+│   │   ├── users/
+│   │   │   ├── controllers/
+│   │   │   │   └── users.controller.ts
+│   │   │   ├── dtos/
+│   │   │   │   └── create-user.dto.ts
+│   │   │   ├── entities/
+│   │   │   │   └── users.entity.ts
+│   │   │   ├── services/
+│   │   │   │   └── users.service.ts
+│   │   │   └── users.module.ts
+│   │   └── authentication/
+│   │       ├── controllers/
+│   │       │   └── authentication.controller.ts
+│   │       ├── dtos/
+│   │       │   └── signin-auth.dto.ts
+│   │       ├── services/
+│   │       │   ├── auth.service.ts
+│   │       │   └── authenticatiion.service.ts
+│   │       └── authentication.module.ts
+├── errors/
+│   ├── errors.module.ts
+│   └── errors.service.ts
+├── guards/
+│   ├── jwt-auth.guard.ts
+│   └── local-auth.guard.ts
+├── app.module.ts
+└── main.ts
+```
+
 # Run the project
 
 Step-by-step to start the project
