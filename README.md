@@ -25,40 +25,30 @@
 
 The registration and login system has been implemented to provide a secure and efficient method of user authentication. When logging in, the system generates and returns a JSON Web Token (JWT). This token is used to authenticate and authorize access to the resources of the ApiRest developed in Java. By using the JWT, it ensures that subsequent interactions with the ApiRest are secure and that only authenticated users can access the protected services.
 
-
-## Running App
-
-Command necessary for running the application
-
-```bash
-  npm run start
-```
-
-
 # Project Proposal
 
 ## Conducted By
-```bash
+
 Sara Ruiz, Valeria Henao, Maria Alejandra Ramirez and Miguel Angel Espinal from the Meta clan and Juan Pablo Sanabria and Cristian Franco from Van Rossum clan.
-```
+
 ## Category
-```bash
+
 E-commerce of products and services
-```
+
 ## Purpose
-```bash
+
 Develop an inventory and billing management system for stores, with the capability to manage multiple stores simultaneously and provide differentiated functionalities for employees and administrators.
-```
+
 ## Why? 
-```bash
+
 The lack of efficient systems complicates inventory and billing management in stores, causing errors, time loss, and lack of relevant information, especially when managing multiple stores.
-```
+
 ## For whon? 
-```bash
+
 The StockSync inventory and billing management system is designed for store owners and managers who face challenges in inventory management and billing processes, particularly those operating multiple stores simultaneously.
 
 It also benefits store employees by facilitating tasks such as generating invoices and managing customers, thereby optimizing their time and increasing accuracy in their daily operations.
-```
+
 # Diagrams
 
 administrators
@@ -96,12 +86,6 @@ PORT= 4000
 ### Configure Postman
 ```bash
 We will open the local Postman and import the 'postman_collection.json' file to load the request collection and test our endpoints.
-```
-
-### Access the endpoint documentation
-```bash
-We access the route to view the Swagger documentation
----> http://localhost:4000/v1/api/docs
 ```
 
 ### Start the app and acces the endpoint documentation
