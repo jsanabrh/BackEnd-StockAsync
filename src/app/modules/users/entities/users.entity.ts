@@ -1,7 +1,7 @@
 import { IsOptional } from '@nestjs/class-validator';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Role } from 'src/models/roles.model';
+import { Role } from '../../../../infrastructure/adapters/models/roles.model';
 import { IsEnum } from 'class-validator';
 
 @Schema({ timestamps: true })

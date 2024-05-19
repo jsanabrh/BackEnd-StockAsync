@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DatabaseModule } from './database/database.module';
-import dbConfig from './database/db-config';
-import { UsersModule } from './modules/users/users.module';
-import { AuthenticationModule } from './authentication/authentication.module';
+import { DatabaseModule } from './infrastructure/database/database.module';
+import dbConfig from './infrastructure/database/db-config';
+import { UsersModule } from './app/modules/users/users.module';
+import { AuthenticationModule } from './app/modules/authentication/authentication.module';
 import { ErrorModule } from './errors/errors.module';
 
 @Module({

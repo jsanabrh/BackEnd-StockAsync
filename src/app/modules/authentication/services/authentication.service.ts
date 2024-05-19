@@ -1,13 +1,13 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
-import { SignInDto } from '../dto/signin-auth.dto';
+import { SignInDto } from '../dtos/signin-auth.dto';
 import { ErrorService } from 'src/errors/errors.service';
 import { InjectModel } from '@nestjs/mongoose';
-import { User } from 'src/modules/users/entities/users.entity';
+import { User } from 'src/app/modules/users/entities/users.entity';
 import { Model } from 'mongoose';
-import { hashingService } from 'src/providers/hashing/hashing.service';
-import { PayloadToken } from 'src/models/token.model';
+import { hashingService } from 'src/infrastructure/adapters/hashing/hashing.service';
+import { PayloadToken } from 'src/infrastructure/adapters/models/token.model';
 import { JwtService } from '@nestjs/jwt';
-import dbConfig from 'src/database/db-config';
+import dbConfig from 'src/infrastructure/database/db-config';
 import { ConfigType } from '@nestjs/config';
 
 @Injectable()
