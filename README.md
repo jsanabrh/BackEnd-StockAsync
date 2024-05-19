@@ -53,6 +53,40 @@ It also benefits store employees by facilitating tasks such as generating invoic
 
 administrators
 
+# Software and tools
+
+To implement a registration and login system, we used the following technologies and tools:
+
+### Development environment: 
+
+Visual Studio Code is used
+
+### NestJS: 
+
+The main framework for building the application, known for its modularity and scalability.
+
+### MongoDB:
+
+A NoSQL database offering flexibility and scalability to handle large volumes of data.
+ 
+### Postman: 
+
+A tool to test and validate the API endpoints.GitHub: A platform used for version control and code collaboration.
+
+### JSON Web Tokens (JWT) and Passport: 
+
+JWT is used for secure user authentication, while Passport facilitates the integration of JWT into the authentication system.
+ 
+### class-validator and class-transformer:
+
+Used for data validation and transformation, ensuring the data is correct and secure.
+ 
+### Swagger: 
+ 
+A tool for documenting the API, making it easier to visualize and test the endpoints.
+ 
+This combination has allowed us to develop a secure, efficient, and maintainable system.
+
 # Structure
 
 We use the hexagonal structure as it can promote a cleaner, more flexible, and maintainable architecture, making software development and evolution easier over time
