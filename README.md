@@ -83,6 +83,12 @@ A tool for documenting the API, making it easier to visualize and test the endpo
  
 This combination has allowed us to develop a secure, efficient, and maintainable system.
 
+### Task assignment
+
+In Trello, we manage task assignments with three columns: To-Do List, In Progress, and Completed Tasks, where the workflow is maintained.
+
+Link --> https://trello.com/b/FK2JK8o2/stockasync
+
 # Structure
 
 We use the hexagonal structure as it can promote a cleaner, more flexible, and maintainable architecture, making software development and evolution easier over time
