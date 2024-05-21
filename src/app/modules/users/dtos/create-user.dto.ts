@@ -8,6 +8,8 @@ import {
 } from '@nestjs/class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
+//Dto are created for the user module
+
 export class CreateUserDto {
   @ApiProperty({
     example: '10000987434',

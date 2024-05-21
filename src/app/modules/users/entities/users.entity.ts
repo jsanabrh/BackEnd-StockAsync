@@ -4,6 +4,8 @@ import { Document } from 'mongoose';
 import { Role } from '../../../../infrastructure/adapters/models/roles.model';
 import { IsEnum } from 'class-validator';
 
+//An entity for the user module is created
+
 @Schema({ timestamps: true })
 export class User extends Document {
   @Prop({ unique: true, trim: true })
@@ -25,6 +27,8 @@ export class User extends Document {
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
+
+//Function is created to return the necessary data when making requests.
 
 UserSchema.methods.toJSON = function () {
   const { _id, __v, password, createdAt, updatedAt, ...record } =

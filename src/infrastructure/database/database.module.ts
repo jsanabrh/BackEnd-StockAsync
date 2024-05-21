@@ -3,6 +3,8 @@ import { ConfigType } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import dbConfig from './db-config';
 
+//A global module is configured to establish the connection with MongoDB using Mongoose.
+
 @Global()
 @Module({
   imports: [

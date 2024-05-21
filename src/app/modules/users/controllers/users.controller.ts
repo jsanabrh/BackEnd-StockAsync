@@ -12,6 +12,8 @@ import { CreateUserDto } from '../dtos/create-user.dto';
 import { ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../../../../guards/jwt-auth.guard';
 
+//Controllers are created for the user module
+
 @ApiTags('Users')
 @Controller('users')
 export class UsersController {

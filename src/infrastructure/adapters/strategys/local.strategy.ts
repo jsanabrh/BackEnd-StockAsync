@@ -5,6 +5,8 @@ import { SignInDto } from '../../../app/modules/authentication/dtos/signin-auth.
 import { AuthenticationService } from '../../../app/modules/authentication/services/authentication.service';
 import { User } from '../../../app/modules/users/entities/users.entity';
 
+//The strategy is defined to search for the user using the userIdentification and password provided in the request, using AuthenticationService to perform the user search and authentication
+
 @Injectable()
 export class localStrategy extends PassportStrategy(Strategy, 'local') {
   constructor(private readonly authenticationService: AuthenticationService) {
