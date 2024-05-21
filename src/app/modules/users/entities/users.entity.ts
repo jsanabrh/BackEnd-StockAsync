@@ -22,7 +22,7 @@ export class User extends Document {
 
   @IsEnum(Role)
   @IsOptional()
-  @Prop({ trim: true, enum: Role, default: Role.SELLER })
+  @Prop({ trim: true, enum: Role, default: Role.ADMIN })
   role: Role;
 }
 
