@@ -5,6 +5,8 @@ import { Request } from 'express';
 import { User } from '../../users/entities/users.entity';
 import { LocalAuthGuard } from '../../../../guards/local-auth.guard';
 
+//Controllers are created for the authentication module
+
 @ApiTags('Authentication')
 @Controller('authentication')
 export class AuthenticationController {

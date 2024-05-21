@@ -10,6 +10,8 @@ import { Model } from 'mongoose';
 import { hashingService } from '../../../../infrastructure/adapters/hashing/hashing.service';
 import { ErrorService } from '../../../../errors/errors.service';
 
+//Services are created for the user module
+
 @Injectable()
 export class UsersService {
   constructor(

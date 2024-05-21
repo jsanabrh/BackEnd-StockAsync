@@ -49,10 +49,6 @@ The StockSync inventory and billing management system is designed for store owne
 
 It also benefits store employees by facilitating tasks such as generating invoices and managing customers, thereby optimizing their time and increasing accuracy in their daily operations.
 
-# Diagrams
-
-administrators
-
 # Software and tools
 
 To implement a registration and login system, we used the following technologies and tools:
@@ -145,9 +141,12 @@ src/
 Step-by-step to start the project
 
 ### Install necessary dependencies and enter the project folder
+
+After cloning the repository
+
 ``` bash
-npm install
 cd back-end-stock-async
+npm install
 ```
 
 ### Create, configure, and save the .env file
@@ -156,15 +155,15 @@ In the root of the project, create the .env file where we will copy and paste th
 
 DB_CONNECTION=mongodb://
 DB_HOST=127.0.0.1:27017
-DB_NAME=stockAsync
-DB_USER=juansana
-DB_PASSWORD=juan123
+DB_NAME=yourDataBase
+DB_USER=yourUser
+DB_PASSWORD=yourPassword
 DB_SRV=mongodb+srv:
 DB_CLUSTER=cluster0.mongodb.net
 DB_RETRY=retryWrites=true&w=majority
 
-ACCESS_TOKEN=juanpablo123
-JWT_ACCESS_SECRET=juanpablo123
+ACCESS_TOKEN=yourAccessToken
+JWT_ACCESS_SECRET=yourSecret
 JWT_ACCESS_EXPIRES_TIME=3m
 
 PORT= 4000

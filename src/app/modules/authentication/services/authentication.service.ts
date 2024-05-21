@@ -10,6 +10,8 @@ import { JwtService } from '@nestjs/jwt';
 import dbConfig from 'src/infrastructure/database/db-config';
 import { ConfigType } from '@nestjs/config';
 
+//Common services are created for the authentication module
+
 @Injectable()
 export class AuthenticationService {
   constructor(

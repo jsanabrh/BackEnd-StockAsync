@@ -5,6 +5,8 @@ import dbConfig from '../../../infrastructure/database/db-config';
 import { ConfigType } from '@nestjs/config';
 import { PayloadToken } from '../models/token.model';
 
+//Strategy is defined for token extraction.
+
 Injectable();
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(

@@ -6,6 +6,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function aplication() {
   const app = await NestFactory.create(AppModule);
   const port = process.env.PORT || 5000;
+  app.enableCors();
 
   app.setGlobalPrefix('/v1/api');
 

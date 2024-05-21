@@ -4,6 +4,8 @@ import {
   InternalServerErrorException,
 } from '@nestjs/common';
 
+//The method provided handles errors related to operations in the MongoDB database.
+
 @Injectable()
 export class ErrorService {
   createError(error: any) {

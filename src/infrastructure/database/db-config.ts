@@ -1,5 +1,7 @@
 import { registerAs } from '@nestjs/config';
 
+//An object is created to centralize the database and session configurations of the application, using environment variables to assign the values of this object.
+
 export default registerAs('dbConfig', () => {
   return {
     db: {

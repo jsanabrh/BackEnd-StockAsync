@@ -4,6 +4,8 @@ import { SignInPayload } from '../../../../infrastructure/adapters/models/signIn
 import { ErrorService } from '../../../../errors/errors.service';
 import { PayloadToken } from '../../../../infrastructure/adapters/models/token.model';
 
+//Login service are created for the authentication module
+
 @Injectable()
 export class AuthService {
   constructor(
