@@ -89,6 +89,10 @@ In Trello, we manage task assignments with three columns: To-Do List, In Progres
 
 Link --> https://trello.com/b/FK2JK8o2/stockasync
 
+### Class diagram
+
+link --> https://miro.com/app/board/uXjVKFL-_d8=/
+
 # Structure
 
 We use the hexagonal structure as it can promote a cleaner, more flexible, and maintainable architecture, making software development and evolution easier over time
