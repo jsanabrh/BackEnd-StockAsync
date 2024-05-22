@@ -1,9 +1,10 @@
 import { Controller, Post, Req, UseGuards } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { AuthService } from '../services/auth.service';
 import { Request } from 'express';
 import { User } from '../../users/entities/users.entity';
 import { LocalAuthGuard } from '../../../../guards/local-auth.guard';
+import { SignInDto } from '../dtos/signin-auth.dto';
 
 //Controllers are created for the authentication module
 
@@ -12,6 +13,7 @@ import { LocalAuthGuard } from '../../../../guards/local-auth.guard';
 export class AuthenticationController {
   constructor(private readonly authService: AuthService) {}
 
+  @ApiBody({ type: SignInDto })
   @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@Req() req: Request) {
